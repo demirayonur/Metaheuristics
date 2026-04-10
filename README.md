@@ -206,7 +206,7 @@ class VRPSolution(Solution):
 #### 2. Objective Function (`objective.py`)
 
 Measures solution quality.  **Convention: we always minimize.**
-For maximisation problems (like Knapsack profit), negate the value.
+For maximization problems (like Knapsack profit), negate the value.
 
 ```python
 class KnapsackObjective(ObjectiveFunction):
@@ -281,22 +281,22 @@ by the base class.
 
 Before we look at the algorithm, let us fix the exact model that Gurobi solves.
 Given a set of items, each with a value and a weight, and a bag with finite
-capacity, the question is: *which subset of items should we pack to maximise
+capacity, the question is: *which subset of items should we pack to maximize
 total value without exceeding capacity?*
 
 **Sets**
 
-- $N = \{1, 2, \dots, n\}$: set of items.
+- $\mathcal N = \{1, 2, \dots, n\}$: set of items.
 
 **Parameters**
 
-- $v_i \ge 0$: value (profit) of item $i \in N$.
-- $w_i > 0$: weight of item $i \in N$.
+- $v_i \ge 0$: value (profit) of item $i \in \mathcal N$.
+- $w_i > 0$: weight of item $i \in \mathcal N$.
 - $C > 0$: capacity of the knapsack.
 
 **Decision variables**
 
-- $x_i \in \{0, 1\}$: equals $1$ if item $i$ is packed, $0$ otherwise.
+- $x_i \in {0, 1}$: equals $1$ if item $i$ is packed, $0$ otherwise.
 
 **Model**
 
