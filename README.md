@@ -165,7 +165,7 @@ The simplest escape strategy is to run local search many times from different ra
 
 ### Beyond Multi-Start
 
-Multi start is wasteful because each restart throws away everything the previous search learned. Worse, as problems grow in size and new constraints emerge, as is typical in real world combinatorial optimisation, the probability that a random restart lands in a region that leads to a high quality feasible solution drops sharply. For large scale constrained problems, multi start becomes increasingly unlikely to produce competitive results within a reasonable time budget. On the other hand, metaheuristics are smarter. They use various strategies to escape local optima during a single continuous search:
+Multi start is wasteful because each restart throws away everything the previous search learned. Worse, as problems grow in size and new constraints emerge, as is typical in real world combinatorial optimization, the probability that a random restart lands in a region that leads to a high quality feasible solution drops sharply. For large scale constrained problems, multi start becomes increasingly unlikely to produce competitive results within a reasonable time budget. On the other hand, metaheuristics are smarter. They use various strategies to escape local optima during a single continuous search:
 
 | Strategy | Metaheuristic | How it escapes |
 |---|---|---|
