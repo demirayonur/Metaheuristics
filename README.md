@@ -203,7 +203,7 @@ class VRPSolution(Solution):
 
 #### 2. Objective Function (`objective.py`)
 
-Measures solution quality.  **Convention: we always minimise.**
+Measures solution quality.  **Convention: we always minimize.**
 For maximisation problems (like Knapsack profit), negate the value.
 
 ```python
@@ -215,7 +215,7 @@ class KnapsackObjective(ObjectiveFunction):
 #### 3. Neighbourhood Definition (`neighbourhood.py`)
 
 Defines which solutions are "one step away".  This is the **most important design
-decision** — it controls the landscape the search explores.
+decision**. It controls the landscape the search explores.
 
 ```python
 class KnapsackFlipNeighbourhood(Neighbourhood):
@@ -238,7 +238,7 @@ heuristics.  Better starting points usually help, but diversity matters too.
 The critical decision: do we move to the neighbour, or stay put?
 
 ```python
-class GreedyAcceptance:       # Only improvements — this IS local search
+class GreedyAcceptance:       # Only improvements — this is local search
     accept = candidate_cost < current_cost
 
 class MetropolisAcceptance:   # SA-style — sometimes accept worse
@@ -247,8 +247,7 @@ class MetropolisAcceptance:   # SA-style — sometimes accept worse
 
 #### 6. Termination Criteria (`termination.py`)
 
-When do we stop?  Our `TerminationCriteria` class bundles four independent conditions —
-any one being met triggers termination:
+When do we stop?  Our `TerminationCriteria` class bundles four independent conditions, and meeting any one of them triggers termination:
 
 - Maximum iterations reached
 - Wall-clock time limit exceeded
@@ -269,7 +268,7 @@ class Metaheuristic(ABC):
 ```
 
 Subclasses only implement two methods: `_build_initial()` and `_iterate()`.
-Everything else — timing, history recording, termination checks — is handled
+Everything else such as timing, history recording, termination checks is handled
 by the base class.
 
 ---
