@@ -84,7 +84,7 @@ Metaheuristics/
 │   │   ├── genetic_algorithm.py     # GA with OX crossover + 2-opt
 │   │   └── alns.py                  # ALNS with 3 destroy + 2 repair operators
 │   │
-│   ├── solvers/               # Gurobi exact solvers
+│   ├── solvers/                # Gurobi exact solvers
 │   │   ├── gurobi_knapsack.py
 │   │   ├── gurobi_tsp.py       # MTZ formulation
 │   │   └── gurobi_vrp.py       # Two-index vehicle-flow + MTZ
