@@ -44,12 +44,12 @@ python -m examples.run_all
 
 **Prerequisites:**
 
-| Dependency | Version | Purpose |
+| Dependency | Version | 
 |---|---|---|
-| Python | ≥ 3.10 | f-strings, `match`, type unions |
-| NumPy | ≥ 1.24 | Array operations, RNG |
-| Matplotlib | ≥ 3.7 | Visualisation |
-| Gurobi | ≥ 10.0 | Exact MIP/LP benchmarks |
+| Python | ≥ 3.10 | 
+| NumPy | ≥ 1.24 | 
+| Matplotlib | ≥ 3.7 | 
+| Gurobi | ≥ 10.0 | 
 
 > **Note on Gurobi:** A free academic licence or the restricted
 > licence (ships with `pip install gurobipy`) is sufficient for
