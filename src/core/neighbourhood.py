@@ -1,5 +1,5 @@
 """
-Abstract base class for neighbourhood structures.
+Base class for neighbourhood structures.
 
 The neighbourhood defines which solutions are *one move* away from the
 current solution.  This is arguably the most important design decision
@@ -13,21 +13,19 @@ Examples of neighbourhood moves:
 """
 
 from __future__ import annotations
-from abc import ABC, abstractmethod
 
 import numpy as np
 
 from .solution import Solution
 
 
-class Neighbourhood(ABC):
+class Neighbourhood:
     """
     Defines how to generate neighbours of a given solution.
 
-    Subclasses must implement :meth:`get_random_neighbour`.
+    Subclasses should override :meth:`get_random_neighbour`.
     """
 
-    @abstractmethod
     def get_random_neighbour(
         self, solution: Solution, rng: np.random.Generator
     ) -> Solution:
@@ -46,4 +44,6 @@ class Neighbourhood(ABC):
         Solution
             A new, independent neighbour solution.
         """
-        ...
+        raise NotImplementedError(
+            "Subclasses must implement get_random_neighbour()"
+        )

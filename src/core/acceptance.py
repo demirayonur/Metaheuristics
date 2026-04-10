@@ -10,19 +10,17 @@ Provided implementations:
 """
 
 from __future__ import annotations
-from abc import ABC, abstractmethod
 
 import numpy as np
 
 
-class AcceptanceCriterion(ABC):
+class AcceptanceCriterion:
     """
-    Abstract acceptance criterion.
+    Base acceptance criterion.
 
-    Subclasses implement the :meth:`accept` predicate.
+    Subclasses should override :meth:`accept`.
     """
 
-    @abstractmethod
     def accept(
         self, current_cost: float, candidate_cost: float, **kwargs
     ) -> bool:
@@ -43,11 +41,11 @@ class AcceptanceCriterion(ABC):
         bool
             ``True`` if the candidate should replace the current solution.
         """
-        ...
+        raise NotImplementedError("Subclasses must implement accept()")
 
 
 class GreedyAcceptance(AcceptanceCriterion):
-    """Accept **only** strictly improving moves (minimization)."""
+    """Accept **only** strictly improving moves (minimisation)."""
 
     def accept(
         self, current_cost: float, candidate_cost: float, **kwargs
@@ -66,7 +64,7 @@ class MetropolisAcceptance(AcceptanceCriterion):
 
           P = \\exp\\!\\left(\\frac{-(\\Delta f)}{T}\\right)
 
-      where *Δf = candidate − current > 0* and *T* is the temperature.
+      where *delta_f = candidate - current > 0* and *T* is the temperature.
 
     Required ``**kwargs``:
 

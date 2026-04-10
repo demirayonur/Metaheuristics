@@ -1,7 +1,7 @@
 """
-Abstract skeleton for a single-solution metaheuristic.
+Base skeleton for a single-solution metaheuristic.
 
-Subclasses only need to implement two methods:
+Subclasses only need to override two methods:
 
 * :meth:`_build_initial` — construct or receive a starting solution.
 * :meth:`_iterate` — execute **one** iteration of the search.
@@ -12,7 +12,6 @@ handled by :meth:`run` in the base class.
 
 from __future__ import annotations
 import time
-from abc import ABC, abstractmethod
 
 import numpy as np
 
@@ -22,9 +21,9 @@ from .termination import TerminationCriteria
 from .history import SearchHistory
 
 
-class Metaheuristic(ABC):
+class Metaheuristic:
     """
-    Abstract base class for single-solution metaheuristics.
+    Base class for single-solution metaheuristics.
 
     Parameters
     ----------
@@ -58,14 +57,16 @@ class Metaheuristic(ABC):
         self.current_solution: Solution | None = None
         self.current_cost: float = np.inf
 
-    # ── abstract hooks ──────────────────────────────────────────────
+    # ── hooks for subclasses ────────────────────────────────────────
 
-    @abstractmethod
     def _build_initial(self, rng: np.random.Generator) -> Solution:
-        """Construct or receive an initial solution."""
-        ...
+        """
+        Construct or receive an initial solution.
 
-    @abstractmethod
+        Override this in your subclass.
+        """
+        raise NotImplementedError("Subclasses must implement _build_initial()")
+
     def _iterate(self, iteration: int, rng: np.random.Generator) -> None:
         """
         Execute **one** iteration of the search.
@@ -73,8 +74,10 @@ class Metaheuristic(ABC):
         Must update ``self.current_solution`` / ``self.current_cost``,
         and, when an improvement is found, also
         ``self.best_solution`` / ``self.best_cost``.
+
+        Override this in your subclass.
         """
-        ...
+        raise NotImplementedError("Subclasses must implement _iterate()")
 
     # ── main run loop ───────────────────────────────────────────────
 
