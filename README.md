@@ -44,8 +44,8 @@ python -m examples.run_all
 
 **Prerequisites:**
 
-| Dependency | Version | 
-|---|---|---|
+| Dependency | Version |
+|---|---|
 | Python | ≥ 3.10 | 
 | NumPy | ≥ 1.24 | 
 | Matplotlib | ≥ 3.7 | 
