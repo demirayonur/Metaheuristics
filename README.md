@@ -118,11 +118,11 @@ Metaheuristics/
 Local search is the simplest optimization strategy:
 
 1. **Start** from some initial solution *s*.
-2. **Look around** — examine the *neighbourhood* N(s), the set of solutions reachable in one step.
+2. **Look around** —> examine the *neighbourhood* N(s), the set of solutions reachable in one step.
 3. **Move** to the best improving neighbour.
 4. **Repeat** until no neighbour is better than the current solution.
 
-When you stop, you are at a **local optimum** — a solution that is at least as good as
+When you stop, you are at a **local optimum**, which is a solution that is at least as good as
 everything "nearby", but not necessarily the best solution overall.
 
 ### Key Vocabulary
@@ -132,8 +132,8 @@ everything "nearby", but not necessarily the best solution overall.
 | **Solution representation** | The data structure encoding a candidate answer (binary vector, permutation, route list, …) |
 | **Neighbourhood** | The set of solutions reachable from the current one in a single move |
 | **Move operator** | The function that transforms one solution into a neighbour (flip a bit, swap two cities, …) |
-| **Objective function** | A scalar measure of solution quality — we minimise throughout this tutorial |
-| **Local optimum** | A solution with no improving neighbour — the search *gets stuck* here |
+| **Objective function** | A scalar measure of solution quality —> we minimize throughout this tutorial |
+| **Local optimum** | A solution with no improving neighbour —> the search *gets stuck* here |
 
 ### Demo
 
@@ -159,15 +159,11 @@ where you start, and most starting points lead to mediocre solutions.
 
 ### First Remedy: Multi-Start
 
-The simplest escape strategy is to run local search many times from different random
-starting points and keep the overall best.  With 30 restarts on the Rastrigin function,
-multi-start finds f ≈ 0.017 — much closer to the global optimum.
+The simplest escape strategy is to run local search many times from different random starting points and keep the overall best solution. With 30 restarts on the Rastrigin function, multi start finds $f \approx 0.017$, which is much closer to the global optimum.
 
 ### Beyond Multi-Start
 
-Multi-start is wasteful: each restart throws away everything the previous search learned.
-**Metaheuristics** are smarter — they use various strategies to escape local optima
-*during* a single continuous search:
+Multi start is wasteful because each restart throws away everything the previous search learned. Worse, as problems grow in size and new constraints emerge, as is typical in real world combinatorial optimisation, the probability that a random restart lands in a region that leads to a high quality feasible solution drops sharply. For large scale constrained problems, multi start becomes increasingly unlikely to produce competitive results within a reasonable time budget.
 
 | Strategy | Metaheuristic | How it escapes |
 |---|---|---|
