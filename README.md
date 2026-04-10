@@ -60,10 +60,10 @@ python -m examples.run_all
 ## Repository Structure
 
 ```
-metaheuristics-tutorial/
+Metaheuristics/
 │
 ├── src/
-│   ├── core/                  # Abstract building blocks (Module 3)
+│   ├── core/                  #   Abstract building blocks 
 │   │   ├── solution.py        #   Solution base class
 │   │   ├── objective.py       #   ObjectiveFunction base class
 │   │   ├── neighbourhood.py   #   Neighbourhood base class
