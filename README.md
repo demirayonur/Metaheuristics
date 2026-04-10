@@ -339,20 +339,20 @@ item-by-item selection — green = selected, red = not selected.
 **Genetic Algorithms** (Holland, 1975) maintain a *population* of solutions and evolve
 them through operators inspired by biological evolution:
 
-1. **Selection** — choose parents, biased toward fitter individuals.
+1. **Selection** —> choose parents, biased toward fitter individuals.
    We use **tournament selection** (pick *k* random individuals, keep the best).
 
-2. **Crossover** — combine two parents to produce offspring.
+2. **Crossover** —> combine two parents to produce offspring.
    For permutations (TSP), we use **Order Crossover (OX)**:
    - Copy a random substring from Parent 1.
    - Fill remaining positions with cities from Parent 2, in order, skipping duplicates.
 
-3. **Mutation** — introduce small random changes (swap two cities).
+3. **Mutation** -> introduce small random changes (swap two cities).
 
-4. **Local search** — hybrid GAs apply a few iterations of local improvement (2-opt)
+4. **Local search** —> hybrid GAs apply a few iterations of local improvement (2-opt)
    to each offspring.  This is sometimes called a **memetic algorithm**.
 
-5. **Survival** — the next generation is formed.  **Elitism** carries the best
+5. **Survival** —> the next generation is formed.  **Elitism** carries the best
    individuals forward unchanged.
 
 **Diversity** is crucial: if the population converges too quickly, the GA gets stuck.
