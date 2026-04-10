@@ -1,10 +1,10 @@
-# Metaheuristics: From Local Search to Adaptive Large Neighbourhood Search
+# Metaheuristics
 
-> **A hands-on lecture series with Python implementations and exact-solver benchmarks.**
+> **A hands-on tutorial with object-oriented implementations and exact-solver benchmarks.**
 
-This repository contains a complete, self-contained tutorial on metaheuristic optimisation.
-Every algorithm is implemented from scratch in object-oriented Python, benchmarked against
-[Gurobi](https://www.gurobi.com/) exact solutions, and accompanied by publication-quality
+This repository contains a complete, self-contained tutorial on metaheuristic algorithms for combinatorial optimization.
+Every algorithm is implemented from scratch in an object-oriented manner in Python, benchmarked against
+exact solutions found by [Gurobi](https://www.gurobi.com/), and accompanied by publication-quality
 figures that you can use directly in your slides.
 
 ---
@@ -16,9 +16,9 @@ figures that you can use directly in your slides.
 3. [Module 1 — What Is Local Search?](#module-1--what-is-local-search)
 4. [Module 2 — Why We Need Metaheuristics](#module-2--why-we-need-metaheuristics)
 5. [Module 3 — Anatomy of a Metaheuristic](#module-3--anatomy-of-a-metaheuristic)
-6. [Module 4 — Simulated Annealing (Knapsack)](#module-4--simulated-annealing)
-7. [Module 5 — Genetic Algorithm (TSP)](#module-5--genetic-algorithm)
-8. [Module 6 — Adaptive Large Neighbourhood Search (VRP)](#module-6--adaptive-large-neighbourhood-search)
+6. [Module 4 — Simulated Annealing (for Knapsack Problem)](#module-4--simulated-annealing)
+7. [Module 5 — Genetic Algorithm (for TSP)](#module-5--genetic-algorithm)
+8. [Module 6 — Adaptive Large Neighbourhood Search (for VRP)](#module-6--adaptive-large-neighbourhood-search)
 9. [Generating Figures](#generating-figures)
 10. [Extending the Framework](#extending-the-framework)
 11. [License](#license)
