@@ -77,7 +77,7 @@ Metaheuristics/
 │   │   ├── tsp.py             #   TSP: data, solution, objective
 │   │   └── vrp.py             #   CVRP: data, solution, objective
 │   │
-│   ├── algorithms/            # Metaheuristic implementations
+│   ├── algorithms/                  # Metaheuristic implementations
 │   │   ├── simulated_annealing.py   # SA with geometric cooling
 │   │   ├── genetic_algorithm.py     # GA with OX crossover + 2-opt
 │   │   └── alns.py                  # ALNS with 3 destroy + 2 repair operators
@@ -87,7 +87,7 @@ Metaheuristics/
 │   │   ├── gurobi_tsp.py       # MTZ formulation
 │   │   └── gurobi_vrp.py       # Two-index vehicle-flow + MTZ
 │   │
-│   └── visualization/         # Plotting functions
+│   └── visualization/          # Plotting functions
 │       ├── style.py            #   Shared palette & rcParams
 │       ├── plot_local_search.py
 │       ├── plot_components.py
@@ -95,7 +95,7 @@ Metaheuristics/
 │       ├── plot_ga.py
 │       └── plot_alns.py
 │
-├── examples/                  # Runnable scripts
+├── examples/                  #   Runnable scripts
 │   ├── run_all.py             #   Run everything at once
 │   ├── run_local_search.py    #   Modules 1 & 2 demo
 │   ├── run_sa_knapsack.py     #   Module 4 demo
@@ -115,7 +115,7 @@ Metaheuristics/
 
 ### The Idea
 
-Local search is the simplest optimisation strategy:
+Local search is the simplest optimization strategy:
 
 1. **Start** from some initial solution *s*.
 2. **Look around** — examine the *neighbourhood* N(s), the set of solutions reachable in one step.
