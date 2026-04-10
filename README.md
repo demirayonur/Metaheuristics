@@ -595,9 +595,3 @@ alns = ALNS(
 - Holland, J. H. (1975). *Adaptation in Natural and Artificial Systems.* University of Michigan Press.
 - Ropke, S., & Pisinger, D. (2006). *An Adaptive Large Neighborhood Search Heuristic for the Pickup and Delivery Problem with Time Windows.* Transportation Science, 40(4), 455–472.
 - Miller, C. E., Tucker, A. W., & Zemlin, R. A. (1960). *Integer Programming Formulation of Traveling Salesman Problems.* Journal of the ACM, 7(4), 326–329.
-
----
-
-## License
-
-MIT — see [LICENSE](LICENSE).
