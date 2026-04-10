@@ -21,7 +21,6 @@ figures that you can use directly in your slides.
 8. [Module 6 — Adaptive Large Neighbourhood Search (for VRP)](#module-6--adaptive-large-neighbourhood-search)
 9. [Generating Figures](#generating-figures)
 10. [Extending the Framework](#extending-the-framework)
-11. [License](#license)
 
 ---
 
