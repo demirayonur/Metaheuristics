@@ -296,7 +296,7 @@ total value without exceeding capacity?*
 
 **Decision variables**
 
-- $x_i \in {0, 1}$: equals $1$ if item $i$ is packed, $0$ otherwise.
+- $x_i \in \{0, 1\}$: equals $1$ if item $i$ is packed, $0$ otherwise.
 
 **Model**
 
@@ -304,13 +304,13 @@ $$
 \begin{aligned}
 \max \quad & \sum_{i \in N} v_i\, x_i \\
 \text{s.t.} \quad & \sum_{i \in N} w_i\, x_i \le C \\
-& x_i \in \{0, 1\}, \quad \forall i \in N.
+& x_i \in \{0, 1\}, \quad \forall i \in \mathcal N.
 \end{aligned}
 $$
 
 This is the mixed-integer program that `src/solvers/gurobi_knapsack.py` hands to
 Gurobi. Our SA implementation works on the same decision variables, but it
-**minimises** the negated profit plus a linear penalty for capacity violation,
+**minimizes** the negated profit plus a linear penalty for capacity violation,
 so that the search can temporarily cross infeasible regions between feasible
 basins.
 
